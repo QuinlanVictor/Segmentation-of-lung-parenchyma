@@ -1,6 +1,4 @@
 function OI=deleteConnectionArea(II,S)
-%×î´óÁ¬Í¨·ÖÁ¿µÄÌáÈ¡
-%IIÎªÊäÈë¶şÖµÍ¼Ïñ£¬OIÎªÊä³öÍ¼Ïñ
     L=bwlabel(II,4);
     OI=II;
     stats = regionprops(L);
@@ -8,6 +6,6 @@ function OI=deleteConnectionArea(II,S)
     ind = find(Ar<S);
     x=size(ind,1);
     for i=1:x
-        OI(L==ind(i))=0;%½«ÆäËûÇøÓòÖÃÎª0
+        OI(L==ind(i))=0;%å°†å…¶ä»–åŒºåŸŸç½®ä¸º0
     end    
 end
